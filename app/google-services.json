@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "853009365109",
+    "project_id": "fir-labmpr2",
+    "storage_bucket": "fir-labmpr2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853009365109:android:4b26589f97db8c8a68e03c",
+        "android_client_info": {
+          "package_name": "com.example.firebasecrud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853009365109-uflj54oshpnf2flniv7takfl9v6hkoa9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNkTBqFdjp6aDP5bdI_QWvCHRHs1cx20c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853009365109-uflj54oshpnf2flniv7takfl9v6hkoa9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
