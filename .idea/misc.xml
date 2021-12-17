@@ -4,7 +4,24 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Project_Coding/Android_Studio/TEMP/app/src/main/res/layout/activity_main.xml" value="0.1621376811594203" />
-        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/layout/activity_main.xml" value="0.13196555217831812" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.290625" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/drawable/button_back.xml" value="0.290625" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/drawable/ic_add.xml" value="0.290625" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/drawable/ic_delete.xml" value="0.290625" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/drawable/ic_edit.xml" value="0.290625" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/drawable/ic_launcher_background.xml" value="0.290625" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/drawable/ic_logout.xml" value="0.290625" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/drawable/progress_back.xml" value="0.290625" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/drawable/rounded_drawable.xml" value="0.290625" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/drawable/rounded_draweble.xml" value="0.290625" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/layout/activity_add_course.xml" value="0.24365942028985507" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/layout/activity_edit_course.xml" value="0.24365942028985507" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/layout/activity_login.xml" value="0.24365942028985507" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/layout/activity_register.xml" value="0.24365942028985507" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.24365942028985507" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/layout/course_rv_item.xml" value="0.24365942028985507" />
+        <entry key="..\:/Project_Coding/Android_Studio/firebaseCRUD-java/app/src/main/res/menu/menu_main.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

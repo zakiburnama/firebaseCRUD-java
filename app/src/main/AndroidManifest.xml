@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseCRUD">
         <activity
+            android:name=".EditCourseActivity"
+            android:label="Edit Course" />
+        <activity
+            android:name=".AddCourseActivity"
+            android:label="Add Course" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
