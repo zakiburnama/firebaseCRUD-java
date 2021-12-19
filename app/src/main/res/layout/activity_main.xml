@@ -6,15 +6,50 @@
     android:id="@+id/idRLHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_shade_1"
+    android:background="@color/merah"
     tools:context=".MainActivity">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:background="@color/merah">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bERITA is NEWS"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:layout_gravity="center"/>
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/closeBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:background="@color/black_shade_3"-->
+<!--            app:srcCompat="@drawable/ic_close"-->
+<!--            app:tint="@color/white" />-->
+
+    </androidx.appcompat.widget.Toolbar>
+
+
     <!--recycler view for our data-->
+
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRVCourses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/course_rv_item" />
+        tools:listitem="@layout/course_rv_item"
+        android:paddingHorizontal="10dp"
+        android:layout_below="@id/toolbar"/>
 
     <!--progress bar for loading indicator-->
     <ProgressBar
@@ -23,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:indeterminate="true"
-        android:indeterminateDrawable="@drawable/progress_back" />
+        android:indeterminateDrawable="@drawable/progress_back"/>
 
     <!--floating action button-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -31,12 +66,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:src="@drawable/ic_add"
-        app:background="@color/black_shade_1"
-        app:backgroundTint="@color/black_shade_2"
-        app:tint="@color/white" />
+        app:backgroundTint="@color/merahmuda"
+        app:tint="@color/white"
+        android:contentDescription="TODO" />
 
 </RelativeLayout>

@@ -23,7 +23,7 @@
         <gradient
             android:angle="0"
             android:endColor="#00ffffff"
-            android:startColor="@color/purple_200"
+            android:startColor="@color/white"
             android:type="sweep"
             android:useLevel="false" />
     </shape>

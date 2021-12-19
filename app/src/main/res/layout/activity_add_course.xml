@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_shade_1"
+    android:background="@color/merah"
     tools:context=".AddCourseActivity">
 
     <RelativeLayout
@@ -176,7 +176,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <!--button for adding a new course-->
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/idBtnAddCourse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -184,8 +184,9 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/button_back"
+                android:backgroundTint="@color/white"
                 android:text="Add Your Course"
+                android:textColor="@color/black"
                 android:textAllCaps="false" />
 
 

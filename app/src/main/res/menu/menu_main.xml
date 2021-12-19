@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <!--specifying item for displaying option-->
+
     <item
-        android:id="@+id/idLogOut"
-        android:icon="@drawable/ic_logout"
-        android:title="Log Out" />
+        android:id="@+id/action_setting"
+        android:title="Setting"/>
+
+    <item
+        android:id="@+id/action_about"
+        android:title="About"/>
+
+    <item
+        android:id="@+id/action_exit"
+        android:title="Exit"/>
+
 </menu>

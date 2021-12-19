@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/idRLBSheet"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/black_shade_1"
+    android:background="@color/merah"
     android:padding="4dp">
 
     <!--text view for displaying course name-->
@@ -17,6 +18,16 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold" />
+
+
+    <ImageButton
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/idTVCourseName"
+        android:backgroundTint="@color/merah"
+        app:srcCompat="@drawable/ic_delete"
+        app:tint="@color/white" />
 
     <!--image view for displaying course image-->
 
@@ -78,22 +89,26 @@
         android:weightSum="2">
 
         <!--button for editing course-->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/idBtnEditCourse"
+            android:backgroundTint="@color/white"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="1"
-            android:text="Edit Course"
+            android:text="Edit"
+            android:textColor="@color/black"
             android:textAllCaps="false" />
 
         <!--button for viewing course details-->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/idBtnVIewDetails"
+            android:backgroundTint="@color/white"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="1"
+            android:textColor="@color/black"
             android:text="View Details"
             android:textAllCaps="false" />
 

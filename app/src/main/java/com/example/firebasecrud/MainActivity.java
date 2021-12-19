@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
         mAuth = FirebaseAuth.getInstance();
         courseRVModalArrayList = new ArrayList<>();
         //on below line we are getting database reference.
-        databaseReference = firebaseDatabase.getReference("Courses");
+        databaseReference = firebaseDatabase.getReference("Tes");
         //on below line adding a click listener for our floating action button.
         addCourseFAB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,32 +129,33 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
         displayBottomSheet(courseRVModalArrayList.get(position));
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        //adding a click listner for option selected on below line.
-        int id = item.getItemId();
-        switch (id) {
-            case R.id.idLogOut:
-                //displaying a toast message on user logged out inside on click.
-                Toast.makeText(getApplicationContext(), "User Logged Out", Toast.LENGTH_LONG).show();
-                //on below line we are signing out our user.
-                mAuth.signOut();
-                //on below line we are opening our login activity.
-                Intent i = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(i);
-                this.finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        //adding a click listner for option selected on below line.
+//        int id = item.getItemId();
+//        switch (id) {
+//            case R.id.idLogOut:
+//                //displaying a toast message on user logged out inside on click.
+//                Toast.makeText(getApplicationContext(), "User Logged Out", Toast.LENGTH_LONG).show();
+//                //on below line we are signing out our user.
+////                mAuth.signOut();
+//                //on below line we are opening our login activity.
+////                Intent i = new Intent(MainActivity.this, LoginActivity.class);
+////                startActivity(i);
+////                this.finish();
+////                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        //on below line we are inflating our menu file for displaying our menu options.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // idk still not wroking :(
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        return super.onPrepareOptionsMenu(menu);
+//    }
+
 
     private void displayBottomSheet(CourseRVModal modal) {
         //on below line we are creating our bottom sheet dialog.
@@ -182,6 +184,16 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
         Picasso.get().load(modal.getCourseImg()).into(courseIV);
         Button viewBtn = layout.findViewById(R.id.idBtnVIewDetails);
         Button editBtn = layout.findViewById(R.id.idBtnEditCourse);
+        ImageButton deltBtn = layout.findViewById(R.id.deleteBtn);
+
+        //delete button
+        deltBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseReference.removeValue();
+                Toast.makeText(MainActivity.this, "Di hapus", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         //adding on click listener for our edit button.
         editBtn.setOnClickListener(new View.OnClickListener() {
@@ -194,6 +206,7 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
                 startActivity(i);
             }
         });
+
         //adding click listener for our view button on below line.
         viewBtn.setOnClickListener(new View.OnClickListener() {
             @Override

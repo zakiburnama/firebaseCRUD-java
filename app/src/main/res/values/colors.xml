@@ -23,4 +23,6 @@
     <color name="dark_blue_shade_2">#17388E</color>
     <color name="light_blue_shade">#12B2E6</color>
 
+    <color name="merah">#9B0000</color>
+    <color name="merahmuda">#FF7272</color>
 </resources>
