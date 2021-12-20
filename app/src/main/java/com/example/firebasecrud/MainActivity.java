@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
     DatabaseReference databaseReference;
     private RecyclerView courseRV;
     private FirebaseAuth mAuth;
-    private ProgressBar loadingPB;
+//    private ProgressBar loadingPB;
     private ArrayList<CourseRVModal> courseRVModalArrayList;
     private CourseRVAdapter courseRVAdapter;
     private RelativeLayout homeRL;
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
         //initializing all our variables.
         courseRV = findViewById(R.id.idRVCourses);
         homeRL = findViewById(R.id.idRLBSheet);
-        loadingPB = findViewById(R.id.idPBLoading);
+//        loadingPB = findViewById(R.id.idPBLoading);
         addCourseFAB = findViewById(R.id.idFABAddCourse);
         firebaseDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 //on below line we are hiding our progress bar.
-                loadingPB.setVisibility(View.GONE);
+//                loadingPB.setVisibility(View.GONE);
                 //adding snapshot to our array list on below line.
                 courseRVModalArrayList.add(snapshot.getValue(CourseRVModal.class));
                 //notifying our adapter that data has changed.
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 //this method is called when new child is added we are notifying our adapter and making progress bar visibility as gone.
-                loadingPB.setVisibility(View.GONE);
+//                loadingPB.setVisibility(View.GONE);
                 courseRVAdapter.notifyDataSetChanged();
             }
 
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
             public void onChildRemoved(@NonNull DataSnapshot snapshot) {
                 //notifying our adapter when child is removed.
                 courseRVAdapter.notifyDataSetChanged();
-                loadingPB.setVisibility(View.GONE);
+//                loadingPB.setVisibility(View.GONE);
 
             }
 
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
             public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 //notifying our adapter when child is moved.
                 courseRVAdapter.notifyDataSetChanged();
-                loadingPB.setVisibility(View.GONE);
+//                loadingPB.setVisibility(View.GONE);
             }
 
             @Override
@@ -179,8 +179,8 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
         //on below line we are setting data to different views on below line.
         courseNameTV.setText(modal.getCourseName());
         courseDescTV.setText(modal.getCourseDescription());
-        suitedForTV.setText("Suited for " + modal.getBestSuitedFor());
-        priceTV.setText("Rs." + modal.getCoursePrice());
+        suitedForTV.setText("Kategori: " + modal.getBestSuitedFor());
+        priceTV.setText("Tgl: " + modal.getCoursePrice());
         Picasso.get().load(modal.getCourseImg()).into(courseIV);
         Button viewBtn = layout.findViewById(R.id.idBtnVIewDetails);
         Button editBtn = layout.findViewById(R.id.idBtnEditCourse);
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
             @Override
             public void onClick(View view) {
                 databaseReference.removeValue();
-                Toast.makeText(MainActivity.this, "Di hapus", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Berita dihapus..", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
                 //on below line we are opening our EditCourseActivity on below line.
                 Intent i = new Intent(MainActivity.this, EditCourseActivity.class);
                 //on below line we are passing our course modal
-                i.putExtra("course", modal);
+                i.putExtra("Tes", modal);
                 startActivity(i);
             }
         });

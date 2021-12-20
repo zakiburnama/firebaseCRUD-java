@@ -43,7 +43,7 @@ public class CourseRVAdapter extends RecyclerView.Adapter<CourseRVAdapter.ViewHo
         //setting data to our recycler view item on below line.
         CourseRVModal courseRVModal = courseRVModalArrayList.get(position);
         holder.courseTV.setText(courseRVModal.getCourseName());
-        holder.coursePriceTV.setText("Rs. " + courseRVModal.getCoursePrice());
+        holder.coursePriceTV.setText(courseRVModal.getCoursePrice());
         Picasso.get().load(courseRVModal.getCourseImg()).into(holder.courseIV);
         //adding animation to recycler view item on below line.
         setAnimation(holder.itemView, position);

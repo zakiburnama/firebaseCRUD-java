@@ -4,40 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_margin="5dp"
-    app:cardCornerRadius="4dp"
-    app:cardElevation="1dp">
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="3dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/merah">
+        android:background="@color/merahmuda">
 
         <!--text view for course name-->
         <TextView
             android:id="@+id/idTVCOurseName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:layout_toStartOf="@id/idTVCousePrice"
-            android:layout_toLeftOf="@id/idTVCousePrice"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/im_fell_dw_pica"
             android:padding="4dp"
             android:text="Course Name"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <!--text view for course price-->
-        <TextView
-            android:id="@+id/idTVCousePrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="3dp"
-            android:gravity="center"
-            android:padding="4dp"
-            android:text="Price"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -48,7 +37,27 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_below="@id/idTVCOurseName"
+            android:layout_marginHorizontal="5dp"
             android:scaleType="centerCrop" />
+
+        <!--text view for course price-->
+        <TextView
+            android:id="@+id/idTVCousePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idIVCourse"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/radley"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Price"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="normal" />
 
 
     </RelativeLayout>

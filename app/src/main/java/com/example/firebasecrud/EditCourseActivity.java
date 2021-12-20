@@ -27,7 +27,7 @@ public class EditCourseActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     CourseRVModal courseRVModal;
-    private ProgressBar loadingPB;
+//    private ProgressBar loadingPB;
     //creating a string for our course id.
     private String courseID;
 
@@ -44,11 +44,11 @@ public class EditCourseActivity extends AppCompatActivity {
         bestSuitedEdt = findViewById(R.id.idEdtSuitedFor);
         courseImgEdt = findViewById(R.id.idEdtCourseImageLink);
         courseLinkEdt = findViewById(R.id.idEdtCourseLink);
-        loadingPB = findViewById(R.id.idPBLoading);
+//        loadingPB = findViewById(R.id.idPBLoading);
         firebaseDatabase = FirebaseDatabase.getInstance();
         //on below line we are getting our modal class on which we have passed.
-        courseRVModal = getIntent().getParcelableExtra("course");
-        Button deleteCourseBtn = findViewById(R.id.idBtnDeleteCourse);
+        courseRVModal = getIntent().getParcelableExtra("Tes");
+//        Button deleteCourseBtn = findViewById(R.id.idBtnDeleteCourse);
 
         if (courseRVModal != null) {
             //on below line we are setting data to our edit text from our modal class.
@@ -62,13 +62,13 @@ public class EditCourseActivity extends AppCompatActivity {
         }
 
         //on below line we are initialing our database reference and we are adding a child as our course id.
-        databaseReference = firebaseDatabase.getReference("Courses").child(courseID);
+        databaseReference = firebaseDatabase.getReference("Tes").child(courseID);
         //on below line we are adding click listener for our add course button.
         addCourseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //on below line we are making our progress bar as visible.
-                loadingPB.setVisibility(View.VISIBLE);
+//                loadingPB.setVisibility(View.VISIBLE);
                 //on below line we are getting data from our edit text.
                 String courseName = courseNameEdt.getText().toString();
                 String courseDesc = courseDescEdt.getText().toString();
@@ -91,11 +91,11 @@ public class EditCourseActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         //making progress bar visibility as gone.
-                        loadingPB.setVisibility(View.GONE);
+//                        loadingPB.setVisibility(View.GONE);
                         //adding a map to our database.
                         databaseReference.updateChildren(map);
                         //on below line we are displaying a toast message.
-                        Toast.makeText(EditCourseActivity.this, "Course Updated..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditCourseActivity.this, "Berita diupdate..", Toast.LENGTH_SHORT).show();
                         //opening a new activity after updating our coarse.
                         startActivity(new Intent(EditCourseActivity.this, MainActivity.class));
                     }
@@ -103,20 +103,20 @@ public class EditCourseActivity extends AppCompatActivity {
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         //displaying a failure message on toast.
-                        Toast.makeText(EditCourseActivity.this, "Fail to update course..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditCourseActivity.this, "Gagal mengupdate berita..", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
         });
 
         //adding a click listener for our delete course button.
-        deleteCourseBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //calling a method to delete a course.
-                deleteCourse();
-            }
-        });
+//        deleteCourseBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //calling a method to delete a course.
+//                deleteCourse();
+//            }
+//        });
 
     }
 
@@ -124,7 +124,7 @@ public class EditCourseActivity extends AppCompatActivity {
         //on below line calling a method to delete the course.
         databaseReference.removeValue();
         //displaying a toast message on below line.
-        Toast.makeText(this, "Course Deleted..", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Berita dihapus..", Toast.LENGTH_SHORT).show();
         //opening a main activity on below line.
         startActivity(new Intent(EditCourseActivity.this, MainActivity.class));
     }

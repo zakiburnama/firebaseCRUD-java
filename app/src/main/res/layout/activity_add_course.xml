@@ -25,7 +25,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Name"
+                android:hint="Judul Berita"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -51,10 +51,10 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Price"
+                android:hint="Tanggal diberitakan"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
-                app:boxStrokeColor="@color/purple_200"
+                app:boxStrokeColor="@color/white"
                 app:hintTextColor="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -67,7 +67,7 @@
                     android:textColor="@color/white"
                     android:textColorHint="@color/white"
                     android:textSize="14sp"
-                    app:boxStrokeColor="@color/purple_200" />
+                    app:boxStrokeColor="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!--edit text for course suited for-->
@@ -79,7 +79,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Suited For"
+                android:hint="Kategori Berita"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -105,7 +105,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Image Link"
+                android:hint="Masukkan link gambar berita"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -131,7 +131,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Link"
+                android:hint="Masukkan link berita"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -158,7 +158,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Description"
+                android:hint="Deskripsi berita"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -185,23 +185,23 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/white"
-                android:text="Add Your Course"
-                android:textColor="@color/black"
+                android:text="Tambah Berita"
+                android:textColor="@color/merah"
                 android:textAllCaps="false" />
 
 
         </LinearLayout>
 
         <!--progress bar for loading indicator-->
-        <ProgressBar
-            android:id="@+id/idPBLoading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:indeterminate="true"
-            android:indeterminateDrawable="@drawable/progress_back"
-            android:visibility="gone" />
+<!--        <ProgressBar-->
+<!--            android:id="@+id/idPBLoading"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:indeterminate="true"-->
+<!--            android:indeterminateDrawable="@drawable/progress_back"-->
+<!--            android:visibility="gone" />-->
 
     </RelativeLayout>
 </ScrollView>

@@ -25,7 +25,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Name"
+                android:hint="Judul Berita"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -52,7 +52,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Price"
+                android:hint="Tanggal diberitakan"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:boxStrokeColor="@color/purple_200"
@@ -81,7 +81,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Suited For"
+                android:hint="Kategori Berita"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -108,7 +108,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Image Link"
+                android:hint="Masukkan link gambar berita"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -135,7 +135,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Link"
+                android:hint="Masukkan link berita"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -162,7 +162,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Course Description"
+                android:hint="Deskripsi berita"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -179,56 +179,70 @@
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <LinearLayout
+            <!--button for adding a new course-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/idBtnAddCourse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2">
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/white"
+                android:text="Update Berita"
+                android:textColor="@color/merah"
+                android:textAllCaps="false" />
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="2">-->
 
                 <!--button for updating a new course-->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/idBtnAddCourse"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:text="Update Your \n Course"
-                    android:textColor="@color/black"
-                    android:textAllCaps="false" />
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/idBtnAddCourse"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:backgroundTint="@color/white"-->
+<!--                    android:text="Update Your \n Course"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textAllCaps="false" />-->
 
                 <!--button for deleting a course-->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/idBtnDeleteCourse"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:text="Delete Your \n Course"
-                    android:textColor="@color/black"
-                    android:textAllCaps="false" />
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/idBtnDeleteCourse"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:backgroundTint="@color/white"-->
+<!--                    android:text="Delete Your \n Course"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textAllCaps="false" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
         </LinearLayout>
 
         <!--progress bar for displaying a loading indicator-->
-        <ProgressBar
-            android:id="@+id/idPBLoading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:indeterminate="true"
-            android:indeterminateDrawable="@drawable/progress_back"
-            android:visibility="gone" />
+<!--        <ProgressBar-->
+<!--            android:id="@+id/idPBLoading"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:indeterminate="true"-->
+<!--            android:indeterminateDrawable="@drawable/progress_back"-->
+<!--            android:visibility="gone" />-->
 
     </RelativeLayout>
 

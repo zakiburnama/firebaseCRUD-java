@@ -24,7 +24,7 @@ public class AddCourseActivity extends AppCompatActivity {
     private TextInputEditText courseNameEdt, courseDescEdt, coursePriceEdt, bestSuitedEdt, courseImgEdt, courseLinkEdt;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    private ProgressBar loadingPB;
+//    private ProgressBar loadingPB;
     private String courseID;
 
     @Override
@@ -39,7 +39,7 @@ public class AddCourseActivity extends AppCompatActivity {
         bestSuitedEdt = findViewById(R.id.idEdtSuitedFor);
         courseImgEdt = findViewById(R.id.idEdtCourseImageLink);
         courseLinkEdt = findViewById(R.id.idEdtCourseLink);
-        loadingPB = findViewById(R.id.idPBLoading);
+//        loadingPB = findViewById(R.id.idPBLoading);
         firebaseDatabase = FirebaseDatabase.getInstance();
         //on below line creating our database reference.
         databaseReference = firebaseDatabase.getReference("Tes");
@@ -47,7 +47,7 @@ public class AddCourseActivity extends AppCompatActivity {
         addCourseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadingPB.setVisibility(View.VISIBLE);
+//                loadingPB.setVisibility(View.VISIBLE);
                 //getting data from our edit text.
                 String courseName = courseNameEdt.getText().toString();
                 String courseDesc = courseDescEdt.getText().toString();
@@ -65,7 +65,7 @@ public class AddCourseActivity extends AppCompatActivity {
                         //on below line we are setting data in our firebase database.
                         databaseReference.child(courseID).setValue(courseRVModal);
                         //displaying a toast message.
-                        Toast.makeText(AddCourseActivity.this, "Course Added..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddCourseActivity.this, "Berita ditambahkan..", Toast.LENGTH_SHORT).show();
                         //starting a main activity.
                         startActivity(new Intent(AddCourseActivity.this, MainActivity.class));
                     }
@@ -73,7 +73,7 @@ public class AddCourseActivity extends AppCompatActivity {
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         //displaying a failure message on below line.
-                        Toast.makeText(AddCourseActivity.this, "Fail to add Course..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddCourseActivity.this, "Berita gagal ditambahkan..", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
